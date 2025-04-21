@@ -1,19 +1,21 @@
 ﻿; vk07: a virtual key to do nothing
-*~LShift::Send {Blind}{vk07}
-*~RShift::Send {Blind}{vk07}
+*~LShift::Send "{Blind}{vk07}"
+*~RShift::Send "{Blind}{vk07}"
 
-LShift up::
+LShift up:: {
     if (A_PriorHotkey == "*~LShift")
     {
         ; 無変換キー
-        Send, {vk1Dsc07B}
+        Send "{vk1Dsc07B}"
     }
     Return
+}
 
-RShift up::
+RShift up:: {
     if (A_PriorHotkey == "*~RShift")
     {
         ; 変換キー
-        Send, {vk1Csc079}
+        Send "{vk1Csc079}"
     }
     Return
+}
